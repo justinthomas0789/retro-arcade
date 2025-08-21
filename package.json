@@ -1,0 +1,39 @@
+{
+  "name": "retro-arcade",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm run dev:web & pnpm run dev:mobile",
+    "dev:web": "pnpm --filter @retro-arcade/web dev",
+    "dev:mobile": "pnpm --filter @retro-arcade/mobile start",
+    "build": "turbo build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "type-check": "turbo run type-check",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.5.6",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.6",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.12.3"
+}
+

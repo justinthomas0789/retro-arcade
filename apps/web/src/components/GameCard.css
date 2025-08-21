@@ -1,0 +1,108 @@
+.game-card {
+    display: block;
+    background: var(--surface);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .game-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+  }
+  
+  .game-card:hover .play-overlay {
+    opacity: 1;
+  }
+  
+  .game-thumbnail {
+    height: 120px;
+    background: linear-gradient(45deg, var(--background), var(--surface));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary);
+  }
+  
+  .game-icon {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 10px var(--primary));
+  }
+  
+  .game-info {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .game-name {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: var(--primary);
+  }
+  
+  .game-description {
+    margin: 0 0 15px 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .game-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .difficulty-badge,
+  .category-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .difficulty-badge {
+    color: black;
+  }
+  
+  .category-badge {
+    background: var(--secondary);
+    color: var(--background);
+  }
+  
+  .high-score {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: bold;
+  }
+  
+  .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .play-button {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--primary);
+  }

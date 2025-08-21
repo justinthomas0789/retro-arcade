@@ -1,0 +1,138 @@
+:root {
+    /* Retro Theme */
+    --retro-primary: #00ff00;
+    --retro-secondary: #00aa00;
+    --retro-background: #001100;
+    --retro-surface: #002200;
+    --retro-text: #00ff00;
+    
+    /* Neon Theme */
+    --neon-primary: #00ffff;
+    --neon-secondary: #0088ff;
+    --neon-background: #001122;
+    --neon-surface: #002244;
+    --neon-text: #00ffff;
+    
+    /* Classic Theme */
+    --classic-primary: #ffffff;
+    --classic-secondary: #cccccc;
+    --classic-background: #000000;
+    --classic-surface: #222222;
+    --classic-text: #ffffff;
+  }
+  
+  [data-theme="retro"] {
+    --primary: var(--retro-primary);
+    --secondary: var(--retro-secondary);
+    --background: var(--retro-background);
+    --surface: var(--retro-surface);
+    --text: var(--retro-text);
+  }
+  
+  [data-theme="neon"] {
+    --primary: var(--neon-primary);
+    --secondary: var(--neon-secondary);
+    --background: var(--neon-background);
+    --surface: var(--neon-surface);
+    --text: var(--neon-text);
+  }
+  
+  [data-theme="classic"] {
+    --primary: var(--classic-primary);
+    --secondary: var(--classic-secondary);
+    --background: var(--classic-background);
+    --surface: var(--classic-surface);
+    --text: var(--classic-text);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  
+  .App {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--background), var(--surface));
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-header {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    
+    .retro-text {
+      font-size: 2rem;
+    }
+    
+    .games-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .game-layout {
+      flex-direction: column;
+    }
+    
+    .game-sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      overflow-x: auto;
+    }
+    
+    .settings-layout {
+      flex-direction: column;
+    }
+    
+    .settings-nav {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+    
+    .avatar-options {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .stats-display {
+      grid-template-columns: 1fr;
+    }
+    
+    .control-row {
+      gap: 15px;
+    }
+    
+    .control-btn {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .retro-text {
+      font-size: 1.5rem;
+    }
+    
+    .game-canvas {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .modal-actions {
+      flex-direction: column;
+    }
+    
+    .primary-btn,
+    .secondary-btn {
+      width: 100%;
+    }
+  }

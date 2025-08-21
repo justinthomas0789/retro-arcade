@@ -1,0 +1,99 @@
+.home-screen {
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--primary);
+  }
+  
+  .home-title {
+    margin: 0;
+  }
+  
+  .retro-text {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--primary);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .subtitle {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+  
+  @keyframes glow {
+    from { text-shadow: 0 0 5px var(--primary); }
+    to { text-shadow: 0 0 30px var(--primary), 0 0 40px var(--primary); }
+  }
+  
+  .settings-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+  
+  .settings-btn:hover {
+    background: var(--primary);
+    color: var(--background);
+    box-shadow: 0 0 20px var(--primary);
+  }
+  
+  .category-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .category-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .category-btn:hover,
+  .category-btn.active {
+    background: var(--primary);
+    color: var(--background);
+    border-color: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+  }
+  
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .home-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--secondary);
+    opacity: 0.6;
+  }

@@ -1,0 +1,49 @@
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    user-select: none;
+  }
+  
+  .control-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .control-btn {
+    width: 60px;
+    height: 60px;
+    background: var(--background);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .control-btn:hover,
+  .control-btn:active {
+    background: var(--primary);
+    color: var(--background);
+    box-shadow: 0 0 15px var(--primary);
+  }
+  
+  .drop-btn {
+    width: 130px;
+    font-size: 0.9rem;
+  }
+  
+  .rotate-btn {
+    font-size: 1.5rem;
+  }
